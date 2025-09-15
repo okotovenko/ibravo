@@ -241,7 +241,8 @@ body {
   font-weight: 400;
   font-size: .875rem;
   color: #666;
-  text-align: left
+  text-align: left;
+  line-height: 121.428571%
 }
 .header__logo {
   width: 7.6875rem;
@@ -386,7 +387,8 @@ body {
 .hero__container>p {
   font-size: 1.125rem;
   text-align: center;
-  margin-bottom: 2.1875rem
+  margin-bottom: 2.1875rem;
+  line-height: 122.222222%
 }
 .hero__container h1 {
   font-weight: 800;
