@@ -41,7 +41,8 @@
   content: ""
 }
 ._icon-pause:before {
-  content: ""
+  content: "";
+  opacity: .2
 }
 * {
   padding: 0;
