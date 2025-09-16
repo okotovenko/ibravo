@@ -225,4 +225,31 @@
     window["FLS"] = false;
     isWebp();
     tabs();
+    document.querySelectorAll(".video-player").forEach((player => {
+        const video = player.querySelector(".myVideo");
+        const playBtn = player.querySelector(".play-btn");
+        playBtn.addEventListener("click", (() => {
+            if (video.paused) {
+                document.querySelectorAll(".myVideo").forEach((v => {
+                    if (v !== video) {
+                        v.pause();
+                        const btn = v.closest(".video-player").querySelector(".play-btn");
+                        btn.classList.remove("_icon-pause");
+                        btn.classList.add("_icon-play");
+                    }
+                }));
+                video.play();
+                playBtn.classList.remove("_icon-play");
+                playBtn.classList.add("_icon-pause");
+            } else {
+                video.pause();
+                playBtn.classList.remove("_icon-pause");
+                playBtn.classList.add("_icon-play");
+            }
+        }));
+        video.addEventListener("ended", (() => {
+            playBtn.classList.remove("_icon-pause");
+            playBtn.classList.add("_icon-play");
+        }));
+    }));
 })();

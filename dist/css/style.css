@@ -20,6 +20,29 @@
   font-weight: 400;
   font-style: normal
 }
+[class*=_icon-]::before {
+  font-family: icons;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+@font-face {
+  font-family: icons;
+  font-display: swap;
+  src: url(../fonts/icons.woff2) format("woff2"),url(../fonts/icons.woff) format("woff");
+  font-weight: 400;
+  font-style: normal
+}
+._icon-play:before {
+  content: ""
+}
+._icon-pause:before {
+  content: ""
+}
 * {
   padding: 0;
   margin: 0;
@@ -216,9 +239,64 @@ body {
   -o-object-fit: cover;
   object-fit: cover
 }
-.css-vptvdy.e1b4x27k1 {
-  width: 100%!important;
-  max-width: 100%!important
+.video-player {
+  position: relative;
+  width: 100%;
+  max-width: 25rem;
+  aspect-ratio: 9/16;
+  overflow: hidden;
+  border-radius: 1.25rem
+}
+video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.play-btn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%
+}
+.play-btn::before {
+  font-size: 3.75rem;
+  color: #fff
+}
+.button-insta>a {
+  width: 100%;
+  color: #0095f6;
+  font-size: .875rem;
+  font-weight: 600;
+  padding: 1.25rem .625rem
+}
+.button-tiktok {
+  display: flex;
+  align-items: center;
+  gap: .625rem;
+  justify-content: space-between;
+  padding: .625rem .625rem
+}
+.button-tiktok :first-child {
+  color: #000
+}
+.button-tiktok :last-child {
+  flex: 0 0 7.875rem;
+  padding: .5rem .25rem;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  background-color: #fe2c55;
+  border: 1px solid #fe2c55;
+  border-radius: 62.4375rem
 }
 .header {
   padding: 1.1875rem 0
@@ -602,29 +680,9 @@ body {
 }
 .videos__item {
   width: 33%;
-  aspect-ratio: 9/16;
-  border-radius: 1.25rem;
-  overflow: hidden
-}
-.videos__item blockquote {
-  width: 100%;
-  height: 100%;
-  margin: 0
-}
-.videos__item blockquote iframe {
-  width: 100%;
-  height: 100%!important
-}
-.videos__item blockquote iframe .css-vptvdy.e1b4x27k1 {
-  width: 100%;
-  max-width: 100%
-}
-.videos__item iframe {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  min-width: 100%!important
+  border: 1px solid #eaecf5;
+  border-top-left-radius: 1.25rem;
+  border-top-right-radius: 1.25rem
 }
 @media (min-width:75em) {
   .tabs__navigation {
@@ -783,6 +841,9 @@ body {
   .button {
     padding: 1.375rem .625rem
   }
+  .video-player {
+    max-width: 100%
+  }
   .header {
     padding: .9375rem 0
   }
@@ -918,6 +979,15 @@ body {
     box-shadow: 0 8px 20px 0 rgba(0,0,0,.09);
     transition: all .3s ease 0s;
     background: #158f1b
+  }
+  .button-insta>a:hover {
+    text-decoration: underline
+  }
+  .button-tiktok :first-child:hover {
+    text-decoration: underline
+  }
+  .button-tiktok :last-child:hover {
+    background-color: #af213d
   }
   .header__right a:hover {
     color: #666;
