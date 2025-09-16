@@ -449,7 +449,17 @@ video {
   gap: 1.25rem
 }
 .hero {
-  background: center/cover url(../img/hero-bg.webp) no-repeat
+  position: relative
+}
+.hero__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  z-index: -1
 }
 .hero__container {
   display: flex;

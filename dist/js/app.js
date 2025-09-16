@@ -229,15 +229,22 @@
         const video = player.querySelector(".myVideo");
         const playBtn = player.querySelector(".play-btn");
         playBtn.addEventListener("click", (() => {
+            if (!video.querySelector("source")) {
+                const source = document.createElement("source");
+                source.src = video.dataset.src;
+                source.type = "video/mp4";
+                video.appendChild(source);
+                video.load();
+            }
+            document.querySelectorAll(".myVideo").forEach((v => {
+                if (v !== video) {
+                    v.pause();
+                    const btn = v.closest(".video-player").querySelector(".play-btn");
+                    btn.classList.remove("_icon-pause");
+                    btn.classList.add("_icon-play");
+                }
+            }));
             if (video.paused) {
-                document.querySelectorAll(".myVideo").forEach((v => {
-                    if (v !== video) {
-                        v.pause();
-                        const btn = v.closest(".video-player").querySelector(".play-btn");
-                        btn.classList.remove("_icon-pause");
-                        btn.classList.add("_icon-play");
-                    }
-                }));
                 video.play();
                 playBtn.classList.remove("_icon-play");
                 playBtn.classList.add("_icon-pause");

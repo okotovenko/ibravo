@@ -9,7 +9,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250916154418">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250916163424">
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="canonical" href="https://ibravo.it/">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,6 +58,7 @@
 		</header>
 		<main class="page">
 			<section class="page__hero hero">
+				<img class="hero__img" src="img/hero-bg.webp" alt="" fetchpriority="high">
 				<div class="hero__container">
 					<span>Il tuo iPhone o MacBook ha bisogno di aiuto?</span>
 					<h1>Scegli <span>iBravo</span></h1>
@@ -113,7 +114,7 @@
 							</div>
 						</div>
 						<div class="info__right">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.8080151427116!2d11.882984976842147!3d45.41321087107317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477ed3ca4cd8b9a3%3A0x555c179c4354a68b!2siBravo%20-%20Riparazione%20iPhone%2C%20iPad%2C%20Apple%20Watch%2C%20MacBook%20a%20Padova!5e0!3m2!1sit!2sit!4v1758015612721!5m2!1sit!2sit" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							<iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.8080151427116!2d11.882984976842147!3d45.41321087107317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477ed3ca4cd8b9a3%3A0x555c179c4354a68b!2siBravo%20-%20Riparazione%20iPhone%2C%20iPad%2C%20Apple%20Watch%2C%20MacBook%20a%20Padova!5e0!3m2!1sit!2sit!4v1758015612721!5m2!1sit!2sit" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 						</div>
 					</div>
 				</div>
@@ -123,10 +124,13 @@
 					<h2>Prezzi per la riparazione iPhone</h2>
 					<div data-tabs class="tabs">
 						<nav data-tabs-titles class="tabs__navigation">
-							<button type="button" class="tabs__title _tab-active">Riparazione iPhone</button>
-							<button type="button" class="tabs__title">Riparazione Apple Watch</button>
-							<button type="button" class="tabs__title">Riparazione iPad</button>
-							<button type="button" class="tabs__title">Riparazione MacBook</button>
+							<button type="button" class="tabs__title _tab-active" aria-label="Riparazione iPhone">Riparazione
+								iPhone</button>
+							<button type="button" class="tabs__title" aria-label="Riparazione Apple Watch">Riparazione Apple
+								Watch</button>
+							<button type="button" class="tabs__title" aria-label="Riparazione iPad">Riparazione iPad</button>
+							<button type="button" class="tabs__title" aria-label="Riparazione MacBook">Riparazione
+								MacBook</button>
 						</nav>
 						<div data-tabs-body class="tabs__content">
 							<div class="tabs__body">
@@ -255,11 +259,11 @@
 					<div class="videos__items">
 						<div class="videos__item">
 							<div class="video-player">
-								<video class="myVideo" preload="metadata" playsinline poster="img/poster-01.webp">
-									<source src="img/v0f044gc0000cj543djc77uai53hc410.MP4" type="video/mp4">
+								<video class="myVideo" preload="none" preload="metadata" playsinline fetchpriority="high" poster="img/poster-01.webp" data-src="img/v0f044gc0000cj543djc77uai53hc410.MP4">
+									<!-- <source src="img/v0f044gc0000cj543djc77uai53hc410.MP4" type="video/mp4"> -->
 									Il tuo browser non supporta il tag video.
 								</video>
-								<button class="play-btn _icon-play"></button>
+								<button class="play-btn _icon-play" aria-label="Riproduci"></button>
 							</div>
 							<div class="video__button button-tiktok">
 								<a href="https://www.tiktok.com/@ibravo.it" target="_blank">Guarda su TikTok</a>
@@ -268,11 +272,11 @@
 						</div>
 						<div class="videos__item">
 							<div class="video-player">
-								<video class="myVideo" preload="metadata" playsinline poster="img/poster-02.webp">
-									<source src="img/new-Bb0883569b814e2b9f1470eccee620e2.mp4" type="video/mp4">
+								<video class="myVideo" preload="none" preload="metadata" playsinline fetchpriority="high" poster="img/poster-02.webp" data-src="img/new-Bb0883569b814e2b9f1470eccee620e2.mp4">
+									<!-- <source src="img/new-Bb0883569b814e2b9f1470eccee620e2.mp4" type="video/mp4"> -->
 									Il tuo browser non supporta il tag video.
 								</video>
-								<button class="play-btn _icon-play"></button>
+								<button class="play-btn _icon-play" aria-label="Riproduci"></button>
 							</div>
 							<div class="video__button button-insta">
 								<a href="https://www.instagram.com/ibravo.it" target="_blank">Ancora di più su Instagram</a>
@@ -280,11 +284,11 @@
 						</div>
 						<div class="videos__item">
 							<div class="video-player">
-								<video class="myVideo" preload="metadata" playsinline poster="img/poster-03.webp">
-									<source src="img/new-1D8e2df948d84e79b1fae8b08ca6e028.mp4" type="video/mp4">
+								<video class="myVideo" preload="none" preload="metadata" playsinline fetchpriority="high" poster="img/poster-03.webp" data-src="img/new-1D8e2df948d84e79b1fae8b08ca6e028.mp4">
+									<!-- <source src="img/new-1D8e2df948d84e79b1fae8b08ca6e028.mp4" type="video/mp4"> -->
 									Il tuo browser non supporta il tag video.
 								</video>
-								<button class="play-btn _icon-play"></button>
+								<button class="play-btn _icon-play" aria-label="Riproduci"></button>
 							</div>
 							<div class="video__button button-insta">
 								<a href="https://www.instagram.com/ibravo.it" target="_blank">Ancora di più su Instagram</a>
@@ -367,7 +371,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20250916154418"></script>
+	<script src="js/app.min.js?_v=20250916163424"></script>
 </body>
 
 </html>
